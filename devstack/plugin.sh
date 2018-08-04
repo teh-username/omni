@@ -3,7 +3,7 @@ set -x
 
 cp /opt/stack/omni/devstack/lib/* $TOP_DIR/lib/
 sudo apt-get install crudini -y
-sudo pip install -r /opt/stack/omni/omni-requirements.txt
+sudo pip install -r /opt/stack/omni/requirements.txt
 
 if [[ "$1" == "stack" && "$2" == "pre-install" ]] && [ "$OMNI_PROVIDER" != "" ]; then
     if [ "$OMNI_PROVIDER" != "gce" ] && [ "$OMNI_PROVIDER" != "aws" ]; then
